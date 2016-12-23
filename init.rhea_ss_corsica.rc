@@ -1,0 +1,7 @@
+import init.bcm2165x.usb.rc
+import init.log.rc
+import init.rhea.rc
+import init.target.rc
+
+on fs
+    mount_all /fstab.rhea_ss_corsica
