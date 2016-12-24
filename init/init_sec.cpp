@@ -42,13 +42,21 @@ void vendor_load_properties()
     property_get("ro.bootloader", bootloader);
 
     if (strstr(bootloader, "S5310")) {
-        /* grandprimeve3gdtv */
+        /* Galaxy Pocket Neo */
         property_set("ro.product.model", "GT-S5310");
         property_set("ro.product.device", "corsica");
     } else {
+    if (strstr(bootloader, "S5310B")) {
+        property_set("ro.product.model", "GT-S5310B");
+        property_set("ro.product.device", "corsica");
+    } else {
     if (strstr(bootloader, "S5312")) {
-        /* grandprimeve3gdtv */
+        /* Galaxy Pocket Neo Duos */
         property_set("ro.product.model", "GT-S5312");
+        property_set("ro.product.device", "corsica");
+    } else {
+    if (strstr(bootloader, "S5312B")) {
+        property_set("ro.product.model", "GT-S5312B");
         property_set("ro.product.device", "corsica");
     }
 
